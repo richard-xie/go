@@ -1,8 +1,15 @@
-FROM alpine:3.4
-MAINTAINER Benedikt Lang <mail@blang.io>
-RUN apk --no-cache add bash go bzr git mercurial subversion openssh-client ca-certificates
+# This is a comment
+FROM centos:7
+MAINTAINER shawn chen <cxwshawn@yeah.net>
+RUN yum install -y git
+RUN yum install -y emacs
+RUN yum install -y gcc
+RUN yum install -y go
 
-RUN mkdir -p /go/src /go/bin && chmod -R 777 /go
-ENV GOPATH /go
-ENV PATH /go/bin:$PATH
-WORKDIR /go
+# RUN cd ~
+# RUN git clone https://github.com/golang/go.git
+
+# ADD /root/go /root/go
+# expose port
+EXPOSE 4001 2379 2380 7001
+# the command to run
