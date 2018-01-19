@@ -13,3 +13,5 @@ RUN yum install -y go
 # expose port
 EXPOSE 4001 2379 2380 7001
 # the command to run
+
+RUN top
