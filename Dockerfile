@@ -1,5 +1,6 @@
 # This is a comment
-FROM golang
+#FROM golang
+FROM docker.io/golang:alpine
 
 # 更换为阿里云源
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories && \
